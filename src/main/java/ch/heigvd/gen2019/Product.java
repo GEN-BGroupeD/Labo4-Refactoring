@@ -20,10 +20,6 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
-        return color;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -32,8 +28,8 @@ public class Product {
         return currency;
     }
 
-    String getColorFor() {
-        switch (getColor()) {
+    String getColor() {
+        switch (color) {
             case 1:
                 return "blue";
             case 2:
@@ -70,7 +66,7 @@ public class Product {
         sb.append(getCode());
         sb.append("\", ");
         sb.append("\"color\": \"");
-        sb.append(getColorFor());
+        sb.append(getColor());
         sb.append("\", ");
 
         if (size != SIZE_NOT_APPLICABLE) {
