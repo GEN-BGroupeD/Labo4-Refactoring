@@ -24,10 +24,6 @@ public class Product {
         return color;
     }
 
-    public int getSize() {
-        return size;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -49,8 +45,8 @@ public class Product {
         }
     }
 
-    String getSizeFor() {
-        switch (getSize()) {
+    String getSize() {
+        switch (size) {
             case 1:
                 return "XS";
             case 2:
@@ -77,9 +73,9 @@ public class Product {
         sb.append(getColorFor());
         sb.append("\", ");
 
-        if (getSize() != SIZE_NOT_APPLICABLE) {
+        if (size != SIZE_NOT_APPLICABLE) {
             sb.append("\"size\": \"");
-            sb.append(getSizeFor());
+            sb.append(getSize());
             sb.append("\", ");
         }
 
