@@ -1,4 +1,4 @@
-package ch.heigvd.gen2019;
+package ch.heigvd.gen2020;
 
 public class Product {
     private String code;
