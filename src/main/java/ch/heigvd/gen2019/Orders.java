@@ -18,7 +18,7 @@ public class Orders {
         return orders.get(i);
     }
 
-    public String getContents() {
+    public String toString() {
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
         for (int i = 0; i < getOrdersCount(); i++) {
