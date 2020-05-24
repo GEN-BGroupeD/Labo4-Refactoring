@@ -4,11 +4,11 @@ public class Product {
     public static final int SIZE_NOT_APPLICABLE = -1;
     private String code;
     private Color color;
-    private int size;
+    private Size size;
     private double price;
     private String currency;
 
-    public Product(String code, Color color, int size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, String currency) {
         this.code = code;
         this.color = color;
         this.size = size;
@@ -33,22 +33,7 @@ public class Product {
     }
 
     String getSize() {
-        switch (size) {
-            case 1:
-                return "XS";
-            case 2:
-                return "S";
-            case 3:
-                return "M";
-            case 4:
-                return "L";
-            case 5:
-                return "XL";
-            case 6:
-                return "XXL";
-            default:
-                return "Invalid Size";
-        }
+        return size.toString();
     }
 
     void getProductContents(StringBuffer sb) {
@@ -60,7 +45,7 @@ public class Product {
         sb.append(getColor());
         sb.append("\", ");
 
-        if (size != SIZE_NOT_APPLICABLE) {
+        if (size != Size.INVALIDE) {
             sb.append("\"size\": \"");
             sb.append(getSize());
             sb.append("\", ");
