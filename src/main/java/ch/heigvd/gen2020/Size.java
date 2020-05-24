@@ -1,5 +1,5 @@
 
-package ch.heigvd.gen2019;
+package ch.heigvd.gen2020;
 
 public enum Size {
     XS,
