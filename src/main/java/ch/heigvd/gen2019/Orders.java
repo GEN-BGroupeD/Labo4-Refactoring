@@ -29,7 +29,7 @@ public class Orders {
             sb.append(", ");
             sb.append("\"products\": [");
             for (int j = 0; j < order.getProductsCount(); j++) {
-                order.getProduct(j).getProductContents(sb);
+                sb.append(order.getProduct(j).toString());
             }
 
             if (order.getProductsCount() > 0) {
